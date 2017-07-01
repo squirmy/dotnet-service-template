@@ -1,7 +1,7 @@
 version: 2.0
 jobs:
   build:
-    working_directory: ~/
+    working_directory: ~/dotnet-service-template
     docker:
       - image: squirmy/cci-dotnet-core:0.0.1
     steps:
