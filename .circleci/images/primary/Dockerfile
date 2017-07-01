@@ -11,7 +11,8 @@ RUN apt-get update \
   && apt-get install -y \
     git mercurial xvfb \
     locales sudo openssh-client ca-certificates tar gzip parallel \
-    net-tools netcat unzip zip bzip2
+    net-tools netcat unzip zip bzip2 \
+    make
 
 
 # Set timezone to UTC by default
