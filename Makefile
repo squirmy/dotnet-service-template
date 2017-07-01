@@ -14,7 +14,7 @@ clean:
 test: $(TEST_RESULTS_JUNIT)
 
 $(TEST_RESULTS_DIR)/junit/%.xml: $(TEST_RESULTS_DIR)/%.trx
-	xsltproc .circleci/trx-to-junit.xslt $< > $@
+	xsltproc --output $@ .circleci/trx-to-junit.xslt $<
 
 $(TEST_RESULTS_DIR)/%.trx: .FORCE
 	dotnet test -l "trx;LogFileName=$(notdir $@)" -r $(dir $@) test/$(basename $(notdir $@))
