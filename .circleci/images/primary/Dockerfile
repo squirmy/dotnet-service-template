@@ -14,7 +14,6 @@ RUN apt-get update \
     net-tools netcat unzip zip bzip2 \
     make xsltproc
 
-
 # Set timezone to UTC by default
 RUN ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime
 
@@ -71,3 +70,5 @@ RUN groupadd --gid 3434 circleci \
 USER circleci
 
 CMD ["/bin/sh"]
+
+ENV DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true
