@@ -1,0 +1,7 @@
+version: 2.0
+jobs:
+  build:
+    docker:
+      - image: squirmy/cci-dotnet-core:0.0.1
+    steps:
+      - checkout
