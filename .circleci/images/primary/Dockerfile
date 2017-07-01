@@ -12,7 +12,7 @@ RUN apt-get update \
     git mercurial xvfb \
     locales sudo openssh-client ca-certificates tar gzip parallel \
     net-tools netcat unzip zip bzip2 \
-    make
+    make xsltproc
 
 
 # Set timezone to UTC by default
